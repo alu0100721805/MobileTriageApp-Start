@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aplicación Móvil de Triaje -Start</string>
+    <string name="txt_Start">Iniciar Triage</string>
+    <string name="txt_InfoTag">Inspeccionar Etiqueta</string>
+    <string name="txt_TagEdit">Editar Etiqueta</string>
+    <string name="txt_FifthQuestion">Responde a preguntas?</string>
+    <string name="txt_FirstQuestion">Camina?</string>
+    <string name="txt_MandibularRetraction">Realizar Tracción Mandibular</string>
+    <string name="txt_PositiveAnswer">Sí</string>
+    <string name="txt_QuarterQuestion">Tiene pulso radial</string>
+    <string name="txt_SafePosition">Colocar el paciente en posición de seguridad</string>
+    <string name="txt_SecondQuestion">Respira?</string>
+    <string name="txt_SixthQuestion">Empezó a respirar?</string>
+    <string name="txt_ThirdQuestion">Más de treinta respiraciones por minuto?</string>
+    <string name="txt_Classify">Enviar al Servidor </string>
+    <string name="txt_ExplainedPermissionNFC">La aplicación necesita el  permiso para hacer operaciones de entrada y salida en etiquetas NFC para funcionar</string>
+    <string name="txt_ExplainedPermissionAccessFine">La aplicación necesita permisos para acceder a datos con una localización alta</string>
+    <string name="txt_Err_NosupportNFC">ERROR: Este dispositivo no soporta NFC.</string>
+    <string name="txt_AdapterNFC_Explication">Se debe habilitar el adaptador NFC</string>
+    <string name="txt_Err_NDEFMESSAGE">ERROR: Formato incorrecto del mensaje (NDEF) </string>
+    <string name="txt_Err_WriteTag">ERROR: No se ha podido escribir en la etiqueta nfc</string>
+    <string name="txt_Err_WriteTagIncompatibleOrUnknownFormat">ERROR: Tecnología compatible o formato de etiqueta desconocida </string>
+    <string name="txt_WriteTagSuccess">Escritura realizada con éxito </string>
+    <string name="txt_ReadTagSucces">Lectura realizada con éxito </string>
+    <string name="txt_Empty">Vacío </string>
+    <string name="txt_Info_TagContent">Contenido:</string>
+    <string name="txt_Info_Progress_Dialog_Write_TAG">Escribiendo … (Por favor mantenga cerca la etiqueta hasta que termine la operación) </string>
+    <string name="txt_Info_Progress_Dialog_Read_TAG">Leyendo … (Por favor mantenga cerca la etiqueta hasta que termine la operación) </string>
+    <string name="txt_WriteinTagNFC">Escribir</string>
+    <string name="txt_ReadTagNFC">Leer </string>
+    <string name="txt_Label_Result">Color Seleccionado</string>
+    <string name="txt_Label_Coordinates">Coordenadas</string>
+    <string name="txt_Latitude">Latitud: </string>
+    <string name="txt_Longitude">Longitud: </string>
+    <string name="txt_GetLocation">Ubicar </string>
+    <string name="txt_Warning_Location">*Obtener coordenadas</string>
+    <string name="txt_Warning_FailedConnection">Fallo al conectar con el API de Google Client</string>
+    <string name="txt_Warning_SuspendConnection">Se ha suspendido la conexión</string>
+    <string name="txt_Warnning_Coordinates_Refresh">Coordenadas actualizadas </string>
+    <string name="txt_Err_ReadIdTag_Incompatible">Tipo de etiqueta incompatible (no tiene id nativo) </string>
+    <string name="txt_Warnning_Send_Server">Es necesario escribir en una etiqueta para enviar los datos al servidor </string>
+    <string name="txt_Title_Dialog">Diálogo de Progreso</string>
+    <string name="txt_Warnning_Read_Is_Necesary">Es necesario leer el contenido de la etiqueta para comprobar el estado desde el servidor </string>
+    <string name="txt_Result_Search_TagOnServer">Etiqueta encontrada!</string>
+    <string-array name="arr_txt_color">
+        <item>Negro</item>
+        <item>Rojo</item>
+        <item>Amarillo</item>
+        <item>Verde</item>
+    </string-array>
+    <string name="txt_NegativeAnswer">No</string>
+    <string name="txt_Title_Id_Tag">ID Etiqueta:</string>
+    <string name="txt_State_Tag">Obtener Estado</string>
+    <string name="title_activity__identify__tag">Activity_Identify_Tag</string>
+</resources>

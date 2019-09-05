@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ull.project.mobiletriageapp_start.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/nottoolbarview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/top_nav_logo_title"
+            android:scaleType="fitStart"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nottoolbarview"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@color/colorBackground">
+
+        <Button
+            android:id="@+id/bt_main_start"
+            style="@style/App_ViewButton_Style"
+            android:layout_gravity="center"
+            android:text="@string/txt_Start" />
+
+        <Button
+            android:id="@+id/bt_main_get_info_tag"
+            style="@style/App_ViewButton_Style"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:text="@string/txt_InfoTag" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+</RelativeLayout>

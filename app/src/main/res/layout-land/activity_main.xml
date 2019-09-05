@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ull.project.mobiletriageapp_start.MainActivity"
+    android:orientation="vertical"
+    android:weightSum="3">
+    <View
+        style="@style/App_Nottoolbar_Style"
+        android:id="@+id/nottoolbarview"/>
+    <LinearLayout
+        android:id="@+id/linear_layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_weight=".7">
+
+        <Button
+            android:text="@string/txt_Start"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            style="@style/App_ViewButton_Style"
+            android:id="@+id/bt_main_start"
+            tools:ignore="RtlHardcoded" />
+     </LinearLayout>
+
+</LinearLayout>
+

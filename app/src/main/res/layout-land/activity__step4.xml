@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/AppTheme"
+    tools:context="com.ull.project.mobiletriageapp_start.Activity_Step4">
+    <View
+        style="@style/App_Nottoolbar_Style"
+        android:id="@+id/nottoolbarview"/>
+    <TextView
+        android:id="@+id/textview_Step4_Question"
+        android:layout_below="@id/nottoolbarview"
+        android:text="@string/txt_QuarterQuestion"
+        style="@style/App_TextView"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_below="@id/textview_Step4_Question">
+
+        <Button
+            style="@style/App_ViewButton_Style"
+            android:id="@+id/bt_yes_step4"
+            android:text="@string/txt_PositiveAnswer"
+            android:layout_margin="@dimen/space_components"/>
+        <Button
+            style="@style/App_ViewButton_Style"
+            android:id="@+id/bt_no_step4"
+            android:text="@string/txt_NegativeAnswer"/>
+    </LinearLayout>
+
+
+
+    <Button
+        style="@style/App_ViewButtonMain_Style"
+        android:id="@+id/bt_main_step4"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

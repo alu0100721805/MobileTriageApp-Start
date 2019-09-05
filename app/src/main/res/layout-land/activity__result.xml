@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_result_rel_lay1"
+    tools:context="com.ull.project.mobiletriageapp_start.Activity_Result">
+    <RelativeLayout
+        android:id="@+id/nottoolbarview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tool_bar"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/top_nav_logo_title"
+            android:scaleType="fitStart"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:id="@+id/scrollview_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/nottoolbarview"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        android:background="@color/colorBackground">
+
+        <LinearLayout
+            android:id="@+id/linear_layout_1_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textview_label_colour_result"
+                style="@style/App_LabelTextView"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/txt_Label_Result" />
+
+            <TextView
+                android:id="@+id/textview_colour_result"
+                style="@style/App_TextView"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+            <LinearLayout
+                android:id="@+id/linear_layout_2_result"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_write_result"
+                    style="@style/App_ViewButton_Style"
+                    android:text="@string/txt_WriteinTagNFC"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_classify_result"
+                style="@style/App_ViewButton_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/txt_Classify" />
+            <RelativeLayout
+                android:id="@+id/relative_layout_toast_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ></RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        style="@style/App_ViewButtonMain_Style"
+        android:id="@+id/bt_main_result"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+
+
+</RelativeLayout>

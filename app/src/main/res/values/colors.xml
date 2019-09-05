@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="colorAcent" type = "color">#64ffda</item>
+    <item name="colorPrimary" type ="color">#00ae88</item>
+    <item name="colorPrimaryDark" type ="color">#00796B</item>
+    <item name="colorBackground" type ="color">#B2DFDB</item>
+    <item name="textColorPrimary" type ="color" >#000000</item>
+    <item name="colorBackgroundText" type="color">#FFFFFF</item>
+    <item name="colorBackgroundToast" type="color">#747474</item>
+    <item name="colorWhiteText" type="color">#FFFFFF</item>
+    <item name="colorTransparent" type="color">#00B2DFDB</item>
+</resources>
+

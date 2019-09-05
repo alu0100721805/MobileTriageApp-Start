@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_layout_fragment_nfc"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:layout_centerInParent="true">
+
+        <ProgressBar
+            android:id="@+id/progressbar_nfc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_vertical_margin"/>
+
+        <TextView
+            android:id="@+id/textview_message_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:textSize="14sp"
+            android:textAppearance="@style/Base.Theme.AppCompat.Dialog">
+        </TextView>
+
+</LinearLayout>

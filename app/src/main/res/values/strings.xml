@@ -1,0 +1,58 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="en">
+    <string name="app_name">Mobile Triage App- Start</string>
+    <string name="txt_Start">Start</string>
+    <string name="txt_TagEdit">Tag Edit</string>
+    <string name="txt_Title_Id_Tag">ID Tag:</string>
+    <string name="txt_State_Tag">Get State</string>
+    <string name="txt_InfoTag">Tag Inspect </string>
+    <string name="txt_PositiveAnswer">Yes</string>
+    <string name="txt_NegativeAnswer">No</string>
+    <string name="txt_FirstQuestion">Does he walk?</string>
+    <string name="txt_SecondQuestion">Does he breathe?</string>
+    <string name="txt_ThirdQuestion">Does more than thirty breaths per minute?</string>
+    <string name="txt_QuarterQuestion">Does he has a radial pulse?</string>
+    <string name="txt_FifthQuestion">Does he answer questions?</string>
+    <string name="txt_SixthQuestion">Did he start to breathe?</string>
+    <string name="txt_MandibularRetraction">Perform a mandibular retraction</string>
+    <string name="txt_SafePosition">Place patient in safe position</string>
+    <string name="txt_Classify">Send Server </string>
+    <string name="txt_ExplainedPermissionNFC">The application needs permission to perform NFC input and output operations to work</string>
+    <string name="txt_ExplainedPermissionAccessFine">The application needs permission to access data with a high location </string>
+    <string name="txt_Err_NosupportNFC">ERROR: This device doesn`t support NFC.</string>
+    <string name="txt_AdapterNFC_Explication">You must enable the NFC adapter</string>
+    <string name="txt_Err_NDEFMESSAGE">ERROR: Incorrect message format(NDEF) </string>
+    <string name="txt_Err_WriteTag">ERROR: Could not write to TAG NFC</string>
+    <string name="txt_Err_WriteTagIncompatibleOrUnknownFormat"> ERROR: Incompatible technology or format not accepted </string>
+    <string name="txt_Info_Progress_Dialog_Write_TAG">Writing … (Please keep the tag until the operation is complete)</string>
+    <string name="txt_Info_Progress_Dialog_Read_TAG">Reading … (Please keep the tag until the operation is complete)</string>
+    <string name="txt_WriteTagSuccess">Successful writing </string>
+    <string name="txt_ReadTagSucces">Successful reading </string>
+    <string name="txt_Info_TagContent">Tag Content:</string>
+    <string name="txt_WriteinTagNFC">Write </string>
+    <string name="txt_ReadTagNFC">Read </string>
+    <string name="txt_Empty">Empty </string>
+    <string name="txt_Label_Result">Selected Colour</string>
+    <string name="txt_Label_Coordinates">Coordinates</string>
+    <string name="txt_Latitude">Latitude: </string>
+    <string name="txt_Longitude">Longitude:_</string>
+    <string name="txt_GetLocation">Locating</string>
+    <string name="txt_Warning_Location">*Get Location</string>
+    <string name="txt_Warning_FailedConnection">Failed Google Api Client Connection</string>
+    <string name="txt_Warning_SuspendConnection">Connection suspended</string>
+    <string name="txt_url_sendTagJSON">https://triageapp-alu0100721805.c9users.io/tag/create</string>
+    <string name="txt_url_getCheckTagJSON">https://triageapp-alu0100721805.c9users.io/tag/read</string>
+    <string name="txt_secret">ullsecret</string>
+    <string name="txt_Warnning_Coordinates_Refresh">Coordinates refresh </string>
+    <string name="txt_Err_ReadIdTag_Incompatible">Incompatible tag type (does not have a native id) </string>
+    <string name="txt_Warnning_Send_Server">It is necessary to write on a tago to send the data to the server </string>
+    <string name="txt_Warnning_Read_Is_Necesary">Read content of tag it is necessary to check on server</string>
+    <string name="txt_Title_Dialog">Progress Dialog</string>
+    <string name="txt_Result_Search_TagOnServer">Tag founded!</string>
+    <string-array name="arr_txt_color">
+        <item>Black</item>
+        <item>Red</item>
+        <item>Yellow</item>
+        <item>Green</item>
+    </string-array>
+    <string name="title_activity__identify__tag">Activity_Identify_Tag</string>
+</resources>
