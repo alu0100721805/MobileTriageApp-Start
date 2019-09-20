@@ -22,6 +22,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 
 import javax.crypto.Mac;
@@ -81,7 +82,7 @@ public class FragmentWriteNFC extends DialogFragment{
         {
             DataNFC datos = new DataNFC(colour);
             String payload =  hmacSha256(colour,new String(id));
-            datos.setTagId_(payload);
+            datos.setTagId(payload);
             NdefMessage message = createNdefMessage(payload,id);
             writeTagTech(message,nfctag,datos);
         }
@@ -99,8 +100,8 @@ public class FragmentWriteNFC extends DialogFragment{
     private NdefMessage createNdefMessage(String payload,byte[] id) {
         try {
 
-            byte[] lang = Locale.getDefault().getLanguage().getBytes("UTF-8");
-            byte[] text = payload.getBytes("UTF-8");
+            byte[] lang = Locale.getDefault().getLanguage().getBytes(StandardCharsets.UTF_8);
+            byte[] text = payload.getBytes(StandardCharsets.UTF_8);
             int langSize = lang.length;
             int textLength = text.length;
 
@@ -115,7 +116,7 @@ public class FragmentWriteNFC extends DialogFragment{
                     payloadraw.toByteArray());
             return new NdefMessage(new NdefRecord[]{record});
 
-        }catch (IOException | NullPointerException e){
+        }catch (NullPointerException e){
             Log.d("Error:",e.getLocalizedMessage());
         }
         return null;

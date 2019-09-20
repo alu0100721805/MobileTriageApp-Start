@@ -13,8 +13,10 @@ class DataNFC implements Parcelable {
 
     private String tagId_;
     private String color_;
-    private double latitude_;
-    private double longitude_;
+    private double lat_;
+    private double long_;
+    private String signature_;
+
     public static Parcelable.Creator<DataNFC> CREATOR = new Parcelable.Creator<DataNFC>(){
 
         @Override
@@ -38,27 +40,27 @@ class DataNFC implements Parcelable {
 
     }
 
-    public String getTagId_() {
-        return tagId_;
+    public String getTagId() {
+        return this.tagId_;
     }
 
-    public void setTagId_(String tagId_) {
+    public void setTagId(String tagId_) {
         this.tagId_ = tagId_;
     }
 
     public double getLatitude() {
-        return latitude_;
+        return lat_;
     }
 
     public void setLatitude(double latitude) {
-        this.latitude_ = latitude;
+        this.lat_ = latitude;
     }
 
-    public double getLongitude_(){
-        return longitude_;
+    public double getLongitude(){
+        return this.long_;
     }
     public void setLongitude(double longitude) {
-        this.longitude_ = longitude;
+        this.long_ = longitude;
     }
 
     public void setColor (String color) {
@@ -68,8 +70,18 @@ class DataNFC implements Parcelable {
         }
 
     }
-    public String getColor_(){
-        return color_;
+    public String getColor(){
+
+        return this.color_;
+    }
+    public String getSignature() {
+        return this.signature_;
+    }
+    public void setSignature(String sign){
+        if(sign == null){
+            this.signature_ = "";
+        }
+        this.signature_ = sign;
     }
 
     @Override
@@ -79,17 +91,19 @@ class DataNFC implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest,int flags){
-        dest.writeString(tagId_);
-        dest.writeString(color_);
-        dest.writeDouble(latitude_);
-        dest.writeDouble(longitude_);
+        dest.writeString(this.getTagId());
+        dest.writeString(this.getColor());
+        dest.writeDouble(this.getLatitude());
+        dest.writeDouble(this.getLongitude());
+        dest.writeString(this.getSignature());
 
     }
     private void readFromParcel(Parcel in){
-        this.setTagId_(in.readString());
-       this.setColor(in.readString());
+        this.setTagId(in.readString());
+        this.setColor(in.readString());
         this.setLatitude(in.readDouble());
         this.setLongitude(in.readDouble());
+        this.setSignature(in.readString());
 
     }
 }

@@ -39,8 +39,8 @@
     <string name="txt_Warning_Location">*Get Location</string>
     <string name="txt_Warning_FailedConnection">Failed Google Api Client Connection</string>
     <string name="txt_Warning_SuspendConnection">Connection suspended</string>
-    <string name="txt_url_sendTagJSON">https://triageapp-alu0100721805.c9users.io/tag/create</string>
-    <string name="txt_url_getCheckTagJSON">https://triageapp-alu0100721805.c9users.io/tag/read</string>
+    <string name="txt_url_sendTagJSON">https://3000-dot-8903396-dot-devshell.appspot.com/tag/create</string>
+    <string name="txt_url_getCheckTagJSON">https://3000-dot-8903396-dot-devshell.appspot.com/tag/read</string>
     <string name="txt_secret">ullsecret</string>
     <string name="txt_Warnning_Coordinates_Refresh">Coordinates refresh </string>
     <string name="txt_Err_ReadIdTag_Incompatible">Incompatible tag type (does not have a native id) </string>
@@ -48,6 +48,7 @@
     <string name="txt_Warnning_Read_Is_Necesary">Read content of tag it is necessary to check on server</string>
     <string name="txt_Title_Dialog">Progress Dialog</string>
     <string name="txt_Result_Search_TagOnServer">Tag founded!</string>
+    <string name="txt_Sign">Sign</string>
     <string-array name="arr_txt_color">
         <item>Black</item>
         <item>Red</item>

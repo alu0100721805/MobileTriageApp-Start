@@ -19,6 +19,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 
 public class FragmentReadNFC extends DialogFragment{
@@ -87,10 +88,10 @@ public class FragmentReadNFC extends DialogFragment{
             if(ndefMessage != null){
                 byte[] payload = ndefMessage.getRecords()[0].getPayload();
                 int languageCodeLength = payload[0] & 51;
-                String text = new String(payload, languageCodeLength + 1, payload.length - languageCodeLength - 1, "UTF-8");
+                String text = new String(payload, languageCodeLength + 1, payload.length - languageCodeLength - 1, StandardCharsets.UTF_8);
                 DataNFC datos_ = new DataNFC(text);
                 txtviewmsg.setText(getString(R.string.txt_ReadTagSucces));
-                datos_.setTagId_(text);
+                datos_.setTagId(text);
                 Intent i = new Intent(this.getContext(),Activity_Info_Tag.class);
                 i.putExtra("ok",true);
                 i.putExtra("Datos", datos_);

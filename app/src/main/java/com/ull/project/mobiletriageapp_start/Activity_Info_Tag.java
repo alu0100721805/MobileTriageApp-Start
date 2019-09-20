@@ -156,7 +156,7 @@ public class Activity_Info_Tag extends AppCompatActivity implements View.OnClick
         ok_ = getIntent().getBooleanExtra("ok",false);
         datos_ = getIntent().getParcelableExtra("Datos");
         if (ok_ && datos_ != null){
-            text_view_id_tag_.setText(datos_.getTagId_());
+            text_view_id_tag_.setText(datos_.getTagId());
             bt_check_.setEnabled(true);
         }else{
             bt_check_.setEnabled(false);
@@ -193,10 +193,12 @@ public class Activity_Info_Tag extends AppCompatActivity implements View.OnClick
             String url = getString(R.string.txt_url_getCheckTagJSON);
             //Se crea el objeto que contendrá los datos de la etiqueta para transmitirlos en la petición
             JSONObject json = new JSONObject();
-            json.put("id",datos_.getTagId_());
-            json.put("color",datos_.getColor_());
-            json.put("longitud",datos_.getLongitude_());
-            json.put("latitud",datos_.getLatitude());
+            json.put("id",datos_.getTagId());
+            json.put("color",datos_.getColor());
+            json.put("long",datos_.getLongitude());
+            json.put("lat",datos_.getLatitude());
+            json.put("sign",datos_.getSignature());
+
             JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.POST, url, json, new Response.Listener<JSONObject>() {
                 @Override
                 public void onResponse(JSONObject response) {
@@ -207,8 +209,9 @@ public class Activity_Info_Tag extends AppCompatActivity implements View.OnClick
                             JSONObject obj = response.getJSONObject("tag");
                             strdata = strdata + "ID: " +  obj.getString("id") + "\n";
                             strdata = strdata + "COLOR: " + obj.getString("color") +"\n";
-                            strdata = strdata + "LAT: " +   obj.getString("latitud") +"\n";
-                            strdata = strdata + "LONG: " + obj.getString("longitud") +"\n";
+                            strdata = strdata + "LAT: " +   obj.getString("lat") +"\n";
+                            strdata = strdata + "LONG: " + obj.getString("long") +"\n";
+                            strdata = strdata + "SING: " + obj.get("sign")+ "\n";
                             text_view_state_.setText(strdata);
                             text_view_state_.setVisibility(View.VISIBLE);
                             customToast = new CustomToast(getApplicationContext(),getString(R.string.txt_Result_Search_TagOnServer),R.layout.custom_toast);

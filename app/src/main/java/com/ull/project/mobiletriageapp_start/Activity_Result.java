@@ -107,7 +107,7 @@ public class Activity_Result extends AppCompatActivity implements View.OnClickLi
                  if(nfcAdapter_.isEnabled()){
                         if(datos_ !=null)
                         {
-                            txtvw_winfo_.setText(datos_.getColor_());
+                            txtvw_winfo_.setText(datos_.getColor());
                         }
 
                  }else{
@@ -159,7 +159,7 @@ public class Activity_Result extends AppCompatActivity implements View.OnClickLi
             if (isDialogDisplayed_) {
                 if (isWrite_ ) {
                     // Se escribe el mensaje de la id interna con el color del trige en la etiqueta
-                    String messageToWrite = datos_.getColor_();
+                    String messageToWrite = datos_.getColor();
                    fragmentWrite_ = (FragmentWriteNFC) getSupportFragmentManager().findFragmentByTag(FragmentWriteNFC.TAG);
                    fragmentWrite_.onNfcDetected(NFCTAG,messageToWrite, NFCTAG.getId());
                 }
@@ -401,28 +401,36 @@ public class Activity_Result extends AppCompatActivity implements View.OnClickLi
                 String url = getString(R.string.txt_url_sendTagJSON);
                 //Se crea el objeto que contendrá los datos de la etiqueta para transmitirlos en la petición
                 JSONObject json = new JSONObject();
-                json.put("id",datos_.getTagId_());
-                json.put("color",datos_.getColor_());
-                json.put("latitud",datos_.getLatitude());
-                json.put("longitud",datos_.getLongitude_());
+                json.put("id",datos_.getTagId());
+                json.put("color",datos_.getColor());
+                json.put("lat",datos_.getLatitude());
+                json.put("long",datos_.getLongitude());
+                json.put("sign",datos_.getSignature());
                 EditText aux = findViewById(R.id.txt_msg_to_send_result);
                 String strdata = "";
-                strdata = strdata + "ID: " + datos_.getTagId_()+"\n";
-                strdata = strdata + "COLOR: " + datos_.getColor_() +"\n";
-                strdata = strdata + "LAT: " + String.valueOf(datos_.getLatitude())+"\n";
-                strdata = strdata + "LONG: " + String.valueOf(datos_.getLongitude_())+"\n";
+                strdata = strdata + "ID: " + datos_.getTagId()+"\n";
+                strdata = strdata + "COLOR: " + datos_.getColor() +"\n";
+                strdata = strdata + "LAT: " + datos_.getLatitude() +"\n";
+                strdata = strdata + "LONG: " + datos_.getLongitude() +"\n";
+                strdata = strdata + "SIGN: " + datos_.getSignature()+"\n";
                 aux.setText(strdata);
                 aux.setVisibility(View.VISIBLE);
                 JsonObjectRequest jsObjRequest = new JsonObjectRequest(Request.Method.POST, url, json, new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
-                                CustomToast customToast = null;
+
                                 try {
+                                    CustomToast customToast = null;
                                     customToast = new CustomToast(getApplicationContext(),response.getString("message"), R.layout.custom_toast);
+                                    if(customToast != null ){
+                                        customToast.inflateToast(custom_toast_);
+                                    } else {
+                                        throw new NullPointerException();
+                                    }
                                 } catch (JSONException e) {
                                     Log.e("Error JSONException",e.getMessage());
                                 }
-                                customToast.inflateToast(custom_toast_);
+
                             }
                         }, new Response.ErrorListener() {
 

@@ -43,6 +43,7 @@
     <string name="txt_Title_Dialog">Diálogo de Progreso</string>
     <string name="txt_Warnning_Read_Is_Necesary">Es necesario leer el contenido de la etiqueta para comprobar el estado desde el servidor </string>
     <string name="txt_Result_Search_TagOnServer">Etiqueta encontrada!</string>
+    <string name="txt_Sign">Firmar</string>
     <string-array name="arr_txt_color">
         <item>Negro</item>
         <item>Rojo</item>
